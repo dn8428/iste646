@@ -1,0 +1,8 @@
+version: "3.9"
+services:
+  lamp:
+    image: mattrayner/lamp:latest-1804
+    ports:
+      - "8080:80"
+    volumes:
+      - "${PWD}/../src:/app"
