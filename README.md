@@ -3,7 +3,7 @@ ISTE-646 Masterminds
 ## Contents of Repo
 - `docker/` - Contains files to run a LAMP docker container for local development
 - `src/` - Contains the GetSimple files
--  docs/ - Contains documentation
+- `docs/` - Contains documentation
 
 
 ## How to develop locally
