@@ -40,7 +40,7 @@ define('GSDONOTPING', 1);
 #define('GSCHMOD', 0755);
 
 # Disable chmod operations
-# define('GSDOCHMOD',false);
+define('GSDOCHMOD',false);
 
 # Enable Canonical Redirects?
 #define('GSCANONICAL', 1);
@@ -84,7 +84,7 @@ define('GSDONOTPING', 1);
 #define("GSNOHIGHLIGHT",true);
 
 # Forces suppression of php errors when GSDEBUG is false, despite php ini settings
-define('GSSUPPRESSERRORS',true);
+# define('GSSUPPRESSERRORS',true);
 
 # Disable check for Apache web server, default false
 #define('GSNOAPACHECHECK', true);

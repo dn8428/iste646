@@ -1,8 +1,8 @@
 version: "3.9"
 services:
   lamp:
-    image: mattrayner/lamp:latest-1804
+    image: php:7.2-apache 
     ports:
       - "8080:80"
     volumes:
-      - "../src:/app"
+      - "../src:/var/www/html"
