@@ -31,7 +31,21 @@ function hello_world() {
 }
 
 function main() {
+   ?>
+   <style>
 
+   </style>
+   <script>
+      function otherSelectCheck()
+      {
+         if(document.getElementById("region").value === 'Other') {
+            document.getElementById("otherRegion").hidden = false;
+         } else {
+            document.getElementById("otherRegion").hidden = true;
+         }
+      }
+   </script>
+   <?php
    if(isset($_POST['submit'])) {
       // *Something was uploaded*
 
@@ -66,11 +80,29 @@ function main() {
    }else {
 
 	?>
-   <form method="post" id="uploadFile" action="<?php echo $_SERVER['REQUEST_URI']?>" enctype="multipart/form-data">
-   <label>Thing:</label>
-   <input type="file" name="sentFile">
-   <input type="submit" name="submit">
-   </form>
+      <h2>Create a new page<h2>
+
+      <h3>Create new League<h3>
+      <form method="post" id="createNewLeague">
+         <div id="regionSelect">
+            <Label for="region">Region: </Label>
+            <select name="region" id="region" onchange="return otherSelectCheck();">
+               <option value="Albany">Albany</option>
+               <option value="Buffalo">Buffalo</option>
+               <option value="Rochester">Rochester</option>
+               <option value="Syracuse">Syracuse</option>
+               <option value="Other">Other</option>
+            </select>
+            <input type="text" name="otherRegion" id="otherRegion" placeholder="Enter Region..." hidden>
+         </div>
+      </form>
+
+
+      <form method="post" id="uploadFile" action="<?php echo $_SERVER['REQUEST_URI']?>" enctype="multipart/form-data">
+         <label>Thing:</label>
+         <input type="file" name="sentFile">
+         <input type="submit" name="submit">
+      </form>
    <?
    }
 }
