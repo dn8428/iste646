@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<item><pubDate>Mon, 27 Mar 2023 00:13:15 +0000</pubDate><title><![CDATA[Program Information]]></title><url><![CDATA[program-information]]></url><meta><![CDATA[]]></meta><metad><![CDATA[]]></metad><menu><![CDATA[Program Information]]></menu><menuOrder><![CDATA[2]]></menuOrder><menuStatus><![CDATA[Y]]></menuStatus><template><![CDATA[template.php]]></template><parent><![CDATA[]]></parent><content><![CDATA[&lt;p&gt;Program Info Page&lt;/p&gt;
+<item><pubDate>Mon, 10 Apr 2023 08:51:25 +0000</pubDate><title><![CDATA[Program Information]]></title><url><![CDATA[program-information]]></url><meta><![CDATA[]]></meta><metad><![CDATA[]]></metad><menu><![CDATA[Program Information]]></menu><menuOrder><![CDATA[2]]></menuOrder><menuStatus><![CDATA[Y]]></menuStatus><template><![CDATA[template.php]]></template><parent><![CDATA[]]></parent><content><![CDATA[&lt;p&gt;Program Info Page&lt;/p&gt;
 
 &lt;ul&gt;
 	&lt;li&gt;&lt;a href=&quot;/index.php?id=all-stars&quot;&gt;All-Stars&lt;/a&gt;&lt;/li&gt;
@@ -7,6 +7,15 @@
 		&lt;ul&gt;
 			&lt;li&gt;&lt;a href=&quot;/index.php?id=results&quot;&gt;Results&lt;/a&gt;&lt;/li&gt;
 			&lt;li&gt;&lt;a href=&quot;/index.php?id=championships&quot;&gt;Championships&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;College Choices - Where former MasterMinds players are going to 
+                college!
+				&lt;ul&gt;
+					&lt;li&gt;&lt;a href=&quot;/index.php?id=2022seniors&quot;&gt;2022 Seniors&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a href=&quot;/index.php?id=2021seniors&quot;&gt;2021 Seniors&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a href=&quot;/index.php?id=2020seniors&quot;&gt;2020 Seniors&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a href=&quot;/index.php?id=2019seniors&quot;&gt;2019 Seniors&lt;/a&gt;&lt;/li&gt;
+				&lt;/ul&gt;
+			&lt;/li&gt;
 		&lt;/ul&gt;
 	&lt;/li&gt;
 	&lt;li&gt;&lt;a href=&quot;/index.php?id=alumni-events&quot;&gt;Alumni Events&lt;/a&gt;&lt;/li&gt;
