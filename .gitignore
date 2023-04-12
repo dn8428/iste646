@@ -1,2 +1,1 @@
-*src/data/other/logs/*
-echo .DS_Store >> .gitignore
+*src/data/other/logs/*.DS_Store
