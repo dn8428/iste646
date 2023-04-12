@@ -1,1 +1,2 @@
 *src/data/other/logs/*
+echo .DS_Store >> .gitignore
