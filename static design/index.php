@@ -33,7 +33,7 @@ $_SESSION['rootPath'] = "./";
         <?php
 
         include($_SESSION['rootPath'] . "assets/inc/navbar.php");
-
+        // test
         ?>
 
         <!--  Quick Scores  -->
