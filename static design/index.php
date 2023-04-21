@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<?php
+session_name("iste646_group");
+session_start();
+
+$_SESSION['rootPath'] = "./";
+
+?>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,7 +19,8 @@
     <link rel="stylesheet" type="text/css" href="./assets/css/mastermind-footer.css"/>
     <link rel="stylesheet" type="text/css" href="./assets/css/mastermind-scorebar.css"/> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo $_SESSION['rootPath']?>assets/css/style.css">
+
     
 
     <title>MasterMinds</title>
@@ -26,7 +34,7 @@
             <div class="nav_container">
                 <div class="navbar">
                     <div class="logo_container">
-                        <a href="./index.html"><img src="assets/img/mastermind_logo_3.png" alt="logo"></a>
+                        <a href="./index.html"><img src="<?php echo $_SESSION['rootPath']?>assets/img/mastermind_logo_3.png" alt="logo"></a>
                     </div>
                     <nav>
                         <ul>
@@ -44,7 +52,7 @@
                                 </div>
                             </li>
                             <li>
-                                <a href="./assets/pages/general-info/index.html" target="_blank">General Information</a>
+                                <a href="<?php echo $_SESSION['rootPath']?>assets/pages/general-info/index.html" target="_blank">General Information</a>
                             </li>
                             <li class="dropdown">
                                 <div class="dropWrap">
@@ -147,14 +155,13 @@
 
                 </div>
             </div>
-
         </div>
         <!--  Placeholder for main contents  -->
         <div class="main-content">
             <div class="main-section">
                 <h2>Master Minds</h2>
                 <div class="image-container">
-                    <img src="./assets/img/javier-trueba-iQPr1XkF5F0-unsplash.jpg" alt="classroom">
+                    <img src="<?php echo $_SESSION['rootPath']?>assets/img/javier-trueba-iQPr1XkF5F0-unsplash.jpg" alt="classroom">
                     <figcaption>Photo by <a
                             href="https://unsplash.com/@javotrueba?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">javier
                             trueba</a> on <a
@@ -166,8 +173,8 @@
                     <h2>Special Events</h2>
                     <div class="events-container">
                         <div class="events-1">
-                            <img src="./assets/img/george-zheng-UA_TpTR5oAI-unsplash.jpg" alt="event picture 1" href="#"
-                                target="_blank">
+                            <img src="<?php echo $_SESSION['rootPath']?>assets/img/george-zheng-UA_TpTR5oAI-unsplash.jpg" alt="event picture 1" href="#"
+                                 target="_blank">
                             <figcaption>Photo by <a
                                     href="https://unsplash.com/@geezheng?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">George
                                     Zheng</a> on <a
@@ -179,8 +186,8 @@
 
                         </div>
                         <div class="events-1">
-                            <img src="./assets/img/sugar-golf-XOSwAvWexBo-unsplash.jpg" alt="event picture 2" href="#"
-                                target="_blank">
+                            <img src="<?php echo $_SESSION['rootPath']?>assets/img/sugar-golf-XOSwAvWexBo-unsplash.jpg" alt="event picture 2" href="#"
+                                 target="_blank">
                             <figcaption>Photo by <a
                                     href="https://unsplash.com/@sugargolf?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Sugar
                                     Golf</a> on <a
@@ -192,8 +199,8 @@
 
                         </div>
                         <div class="events-1">
-                            <img src="./assets/img/giorgio-trovato-_XTY6lD8jgM-unsplash.jpg" alt="event picture 3"
-                                href="#" target="_blank">
+                            <img src="<?php echo $_SESSION['rootPath']?>assets/img/giorgio-trovato-_XTY6lD8jgM-unsplash.jpg" alt="event picture 3"
+                                 href="#" target="_blank">
                             <figcaption>Photo by <a
                                     href="https://unsplash.com/@giorgiotrovato?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Giorgio
                                     Trovato</a> on <a
@@ -283,12 +290,11 @@
                                     <h4>Plattsburgh:</h4>
                                     <p>Thursday, November 10, 2022</p>
                                 </div>
-                                
                             </div>
                         </div>
                         <div class="text-container">
                             <div class="text-container-title">
-                                <h3>How is it Played?</h2>
+                                <h3>How is it Played?</h3>
                             </div>
                             <div class="text">
                                 <p>
@@ -374,13 +380,13 @@
                         </div>
                     </div>
                 </div>
+
                 
                 <div class="resource-container-2"></div>
 
             </div>
 
         </div>
-
 
         <footer class="footer">
             <div class="footer-container">
