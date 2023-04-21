@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,11 +11,13 @@
     <link rel="stylesheet" type="text/css" href="./assets/css/mastermind-navbar.css"/>
     <link rel="stylesheet" type="text/css" href="./assets/css/mastermind-footer.css"/>
     <link rel="stylesheet" type="text/css" href="./assets/css/mastermind-scorebar.css"/> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
-
+    
 
     <title>MasterMinds</title>
 </head>
+
 <body>
     <div class="body-main-container">
         <!--Header -->
@@ -67,7 +70,7 @@
                     </nav>
                 </div>
             </div>
-        
+
             <!--  Quick Scores  -->
             <div class="scorebar-container">
                 <div class="scorebar">
@@ -80,11 +83,12 @@
                         </select>
                     </div>
                     <div class="teamscore-wrap">
-        
+
                         <?php
-        
+
                         // The data should be sent from the database, so I create a DUMMY one for temporary use.
-                        $DUMMY_TEAMSCORE_JSON = ['{
+                        $DUMMY_TEAMSCORE_JSON = [
+                            '{
                         "time":"3:00 pm", 
                         "team1":{"name":"Team A","score":"115"}, 
                         "team2":{"name":"Team B","score":"87"}, 
@@ -118,7 +122,7 @@
                         "team2":{"name":"Team D","score":"105"}, 
                         "location":"Rochester"}'
                         ];
-        
+
                         // Dump data from the array until it's empty
                         foreach ($DUMMY_TEAMSCORE_JSON as $key => $teamscore) {
                             $get = json_decode($teamscore, true);
@@ -135,15 +139,15 @@
                             </div>
                         </div>';
                         }
-        
+
                         ?>
-        
-        
+
+
                     </div>
-        
+
                 </div>
             </div>
-        
+
         </div>
         <!--  Placeholder for main contents  -->
         <div class="main-content">
@@ -151,7 +155,10 @@
                 <h2>Master Minds</h2>
                 <div class="image-container">
                     <img src="./assets/img/javier-trueba-iQPr1XkF5F0-unsplash.jpg" alt="classroom">
-                    <figcaption>Photo by <a href="https://unsplash.com/@javotrueba?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">javier trueba</a> on <a href="https://unsplash.com/photos/iQPr1XkF5F0?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+                    <figcaption>Photo by <a
+                            href="https://unsplash.com/@javotrueba?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">javier
+                            trueba</a> on <a
+                            href="https://unsplash.com/photos/iQPr1XkF5F0?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
                     </figcaption>
                 </div>
 
@@ -159,57 +166,246 @@
                     <h2>Special Events</h2>
                     <div class="events-container">
                         <div class="events-1">
-                            <img src="./assets/img/george-zheng-UA_TpTR5oAI-unsplash.jpg" alt="event picture 1" href="#" target="_blank">
-                            <figcaption>Photo by <a href="https://unsplash.com/@geezheng?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">George Zheng</a> on <a href="https://unsplash.com/images/events/graduation?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+                            <img src="./assets/img/george-zheng-UA_TpTR5oAI-unsplash.jpg" alt="event picture 1" href="#"
+                                target="_blank">
+                            <figcaption>Photo by <a
+                                    href="https://unsplash.com/@geezheng?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">George
+                                    Zheng</a> on <a
+                                    href="https://unsplash.com/images/events/graduation?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
                             </figcaption>
                             <div class="events-title">
                                 <h3>Summer time Alumni</h3>
                             </div>
-                            
+
                         </div>
                         <div class="events-1">
-                            <img src="./assets/img/sugar-golf-XOSwAvWexBo-unsplash.jpg" alt="event picture 2" href="#" target="_blank">
-                            <figcaption>Photo by <a href="https://unsplash.com/@sugargolf?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Sugar Golf</a> on <a href="https://unsplash.com/s/photos/sugar-golf?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+                            <img src="./assets/img/sugar-golf-XOSwAvWexBo-unsplash.jpg" alt="event picture 2" href="#"
+                                target="_blank">
+                            <figcaption>Photo by <a
+                                    href="https://unsplash.com/@sugargolf?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Sugar
+                                    Golf</a> on <a
+                                    href="https://unsplash.com/s/photos/sugar-golf?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
                             </figcaption>
                             <div class="events-title">
                                 <h3>Tournament Invation</h3>
                             </div>
-                            
+
                         </div>
                         <div class="events-1">
-                            <img src="./assets/img/giorgio-trovato-_XTY6lD8jgM-unsplash.jpg" alt="event picture 3" href="#" target="_blank">
-                            <figcaption>Photo by <a href="https://unsplash.com/@giorgiotrovato?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Giorgio Trovato</a> on <a href="https://unsplash.com/s/photos/tournament?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+                            <img src="./assets/img/giorgio-trovato-_XTY6lD8jgM-unsplash.jpg" alt="event picture 3"
+                                href="#" target="_blank">
+                            <figcaption>Photo by <a
+                                    href="https://unsplash.com/@giorgiotrovato?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Giorgio
+                                    Trovato</a> on <a
+                                    href="https://unsplash.com/s/photos/tournament?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
                             </figcaption>
-                            <div class="events-title"><h3>Acronym Tournament</h3></div>
-                            
+                            <div class="events-title">
+                                <h3>Acronym Tournament</h3>
+                            </div>
+
                         </div>
                     </div>
 
                 </div>
-                <div class="text-container">
-                    <h2></h2>
+                <div class="home-text-container">
+                    <h2>Overview</h2>
+                    <div class="text-wrapper">
+                        <div class="text-container">
+                            <div class="text-container-title">
+                                <h3>How is it Played?</h3>
+                            </div>
+                            <div class="text">
+                                <p>
+                                <ul>
+                                    <li>Meets are scheduled roughly
+                                        once a month with the host
+                                        site rotating among league
+                                        schools. Meets are held after
+                                        school, starting at 3:30 and
+                                        ending around 6:30.</li>
+                                        <br>
+                                    <li>
+                                        Each meet has between five
+                                        and seven games with each
+                                        school usually playing twice.
+                                    </li>
+                                    <br>
+                                    <li>
+                                        Two four-person teams face
+                                        off in games that are run in
+                                        eight minute halves with
+                                        teams able to substitute at
+                                        the half. Including JV
+                                        players, schools average
+                                        over a dozen players.
+                                    </li>
+                                    <br>
+                                    <li>
+                                        Students buzz in and must
+                                        be recognized before
+                                        answering. Correct answers
+                                        earn that player's team
+                                        points and the chance for
+                                        the team to work together on
+                                        bonus questions.
+                                    </li>
+                                    <br>
+                                </ul>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="text-container">
+                            <div class="text-container-title">
+                                <h3>Deadlines</h3>
+                            </div>
+                            <div class="text">
+                                <div class="deadline-item">
+                                    <h4>Albany:</h4>
+                                    <p>Friday, September 23, 2022</p>
+                                </div>
+                                <div class="deadline-item">
+                                    <h4>Binghamton:</h4>
+                                    <p>Friday, November 4, 2022</p>
+                                </div>
+                                <div class="deadline-item">
+                                    <h4>Buffalo:</h4>
+                                    <p>Friday, September 23, 2022</p>
+                                </div>
+                                <div class="deadline-item">
+                                    <h4>Rochester:</h4>
+                                    <p>Friday, September 23, 2022</p>
+                                </div>
+                                <div class="deadline-item">
+                                    <h4>Syracuse:</h4>
+                                    <p>Friday, October 7, 2022</p>
+                                </div>
+                                <div class="deadline-item">
+                                    <h4>Plattsburgh:</h4>
+                                    <p>Thursday, November 10, 2022</p>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="text-container">
+                            <div class="text-container-title">
+                                <h3>How is it Played?</h2>
+                            </div>
+                            <div class="text">
+                                <p>
+                                <ul>
+                                    <li>Meets are scheduled roughly
+                                        once a month with the host
+                                        site rotating among league
+                                        schools. Meets are held after
+                                        school, starting at 3:30 and
+                                        ending around 6:30.</li>
+                                    <li>
+                                        <br>
+                                        Each meet has between five
+                                        and seven games with each
+                                        school usually playing twice.
+                                    </li>
+                                    <br>
+                                    <li>
+                                        Two four-person teams face
+                                        off in games that are run in
+                                        eight minute halves with
+                                        teams able to substitute at
+                                        the half. Including JV
+                                        players, schools average
+                                        over a dozen players.
+                                    </li>
+                                    <br>
+                                    <li>
+                                        Students buzz in and must
+                                        be recognized before
+                                        answering. Correct answers
+                                        earn that player's team
+                                        points and the chance for
+                                        the team to work together on
+                                        bonus questions.
+                                    </li>
+                                    <br>
+                                </ul>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
 
-                
+
             </div>
             <div class="side-section">
-                <div class="resource-title"><h2>HeadLines</h2></div>
-                <div class="resource-container-1"></div>
-                <div class="quick-links-title"><h2>Quicklinks</h2></div>
+                <div class="resource-container">
+                   <div class="headline-title"> <h2>HeadLines</h2></div>
+                   <div class="headlines-container">
+                        <div class="headline-text">
+                            <a href="#">headline1</a>
+                        </div>
+                        <div class="headline-text">
+                            <a href="#">headline2</a>
+                        </div>
+                        <div class="headline-text">
+                            <a href="#">headline3</a>
+                        </div>
+                        <div class="headline-text">
+                            <a href="#">headline4</a>
+                        </div>
+                   </div>
+
+                </div>
+                <div class="resource-container-1">
+                    <div class="quick-links-title">
+                        <h2>Quicklinks</h2>
+                    </div>
+                    <div class="links-container">
+                        <div class="link">
+                            <a href="#">link1</a>
+                        </div>
+                        <div class="link">
+                            <a href="#">link2</a>
+                        </div>
+                        <div class="link">
+                            <a href="#">link3</a>
+                        </div>
+                        <div class="link">
+                            <a href="#">link4</a>
+                        </div>
+                    </div>
+                </div>
+                
                 <div class="resource-container-2"></div>
 
             </div>
-            
+
         </div>
-        
-        
+
+
         <footer class="footer">
-            <div>
-                <a>Thank you !</a>
+            <div class="footer-container">
+            <div class=nav-container>
+                <a href="#" target="_blank">Home</a>
+                <a href="#" target="_blank">Program</a>
+                <a href="#" target="_blank">General</a>
+                <a href="#" target="_blank">League</a>
+                <a href="#" target="_blank">Teams</a>
+                <a href="#" target="_blank">Contact</a>
+                <a href="#" target="_blank">related links</a>
+                <a href="#" target="_blank">store</a>
+            </div>
+            <div class="social-icons-container">
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-google"></a>
+                <a href="#" class="fa fa-youtube"></a>
+                <a href="#" class="fa fa-instagram"></a>
+            </div>
             </div>
         </footer>
 
     </div>
 
 </body>
+
 </html>
