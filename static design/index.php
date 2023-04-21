@@ -8,7 +8,6 @@ session_start();
 $_SESSION['rootPath'] = "./";
 
 ?>
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,6 +20,7 @@ $_SESSION['rootPath'] = "./";
     <link rel="stylesheet" type="text/css" href="./assets/css/mastermind-scorebar.css"/> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="<?php echo $_SESSION['rootPath']?>assets/css/style.css">
+
     
 
     <title>MasterMinds</title>
@@ -155,7 +155,6 @@ $_SESSION['rootPath'] = "./";
 
                 </div>
             </div>
-
         </div>
         <!--  Placeholder for main contents  -->
         <div class="main-content">
@@ -291,7 +290,6 @@ $_SESSION['rootPath'] = "./";
                                     <h4>Plattsburgh:</h4>
                                     <p>Thursday, November 10, 2022</p>
                                 </div>
-
                             </div>
                         </div>
                         <div class="text-container">
@@ -383,12 +381,12 @@ $_SESSION['rootPath'] = "./";
                     </div>
                 </div>
 
+                
                 <div class="resource-container-2"></div>
 
             </div>
 
         </div>
-
 
         <footer class="footer">
             <div class="footer-container">
