@@ -1,8 +1,14 @@
 version: "3.9"
 services:
-  lamp:
+  getsimple:
     image: php:7.2-apache 
     ports:
       - "8080:80"
     volumes:
       - "../src:/var/www/html"
+  static:
+    image: php:7.2-apache
+    ports:
+      - "8081:80"
+    volumes:
+      - "../static\ design:/var/www/html"
