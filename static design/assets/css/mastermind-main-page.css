@@ -1,19 +1,14 @@
-.main-container {
-    width: 100vw;
+.link-container {
+    background-color: #CCD0CF;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-/*!* Placeholder for main contents *!*/
-/*.main-content {*/
-/*    width: 100%;*/
-/*    !*margin: 20px 0;*!*/
-/*    display: flex;*/
-/*    justify-content: center;*/
-/*    !*background-color: lightpink;*!*/
-/*    background-color: #E3F9F4;*/
-/*}*/
+.main-content {
+    background-color: rgb(227, 249, 244, .76);
+    margin: 0;
+}
 
 
 .title {
@@ -32,17 +27,16 @@
     align-items: flex-start;
 }
 
+
 .ttlContainer .mainTitle {
-    width: 100%;
     line-height: 1rem;
-    font-weight: normal;
 }
 
 .title .subTitle {
-    width: 100%;
-    color: #303030;
-    font-family: 'Abhaya Libre', serif;
-    font-size: clamp(1rem, 1.6vw, 1.75rem);
+    color: #555A58;
+    font-family: 'Arial', serif;
+    font-size: clamp(1rem, 1.6vw, 2rem);
+    font-weight: lighter;
 }
 
 .imgContainer {
@@ -54,4 +48,63 @@
 .imgContainer img {
     width: 100%;
     aspect-ratio: 3/4;
+}
+
+/* Related Links card */
+.card-container {
+    width: 60%;
+    /*height: fit-content;*/
+    /*background-color: pink;*/
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+}
+
+
+.link-card {
+    width: 100%;
+    aspect-ratio: 12/5;
+    margin: 40px 0;
+    background-color: #FFFFFF;
+    border-radius: 24px;
+    position: relative;
+}
+
+.link-info-card {
+    width: 65%;
+    height: 100%;
+    border-radius: 24px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 1), rgba(255, 255, 255, 1), rgba(255, 255, 255, 1), rgba(255, 255, 255, 1), rgba(255, 255, 255, 1), rgba(255, 255, 255, 1), rgba(255, 255, 255, 1), rgba(255, 255, 255, 1), rgba(255, 255, 255, 1));
+    position: absolute;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.link-info-card .link-info {
+    width: 75%;
+}
+
+.link-info h5 {
+    font-weight: lighter;
+}
+
+.link-img-container {
+    width: 55%;
+    height: 100%;
+    border-radius: 24px;
+    position: absolute;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.link-img-container img {
+    width: 70%;
+    height: 70%;
 }
