@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<channel><item><title><![CDATA[seniors2019]]></title><slug>seniors2019</slug><value><![CDATA[&lt;?php
+echo &quot;&lt;table&gt;\\n\\n&quot;;
+$f = fopen(&quot;data/uploads/collegechoices/seniors2019.csv&quot;, &quot;r&quot;);
+while (($line = fgetcsv($f)) !== false) {
+echo &quot;&lt;tr&gt;&quot;;
+foreach ($line as $cell) {
+echo &quot;&lt;td&gt;&quot; . htmlspecialchars($cell) . &quot;&lt;/td&gt;&quot;;
+}
+echo &quot;&lt;/tr&gt;\\n&quot;;
+}
+fclose($f);
+echo &quot;\\n&lt;/table&gt;&quot;;
+?&gt;]]></value></item><item><title><![CDATA[seniors2020]]></title><slug>seniors2020</slug><value><![CDATA[&lt;?php
+echo &quot;&lt;table&gt;\\n\\n&quot;;
+$f = fopen(&quot;data/uploads/collegechoices/seniors2020.csv&quot;, &quot;r&quot;);
+while (($line = fgetcsv($f)) !== false) {
+echo &quot;&lt;tr&gt;&quot;;
+foreach ($line as $cell) {
+echo &quot;&lt;td&gt;&quot; . htmlspecialchars($cell) . &quot;&lt;/td&gt;&quot;;
+}
+echo &quot;&lt;/tr&gt;\\n&quot;;
+}
+fclose($f);
+echo &quot;\\n&lt;/table&gt;&quot;;
+?&gt;]]></value></item><item><title><![CDATA[seniors2021]]></title><slug>seniors2021</slug><value><![CDATA[&lt;?php
+echo &quot;&lt;table&gt;\\n\\n&quot;;
+$g = fopen(&quot;data/uploads/collegechoices/seniors2021.csv&quot;, &quot;r&quot;);
+while (($line = fgetcsv($g)) !== false) {
+echo &quot;&lt;tr&gt;&quot;;
+foreach ($line as $cell) {
+echo &quot;&lt;td&gt;&quot; . htmlspecialchars($cell) . &quot;&lt;/td&gt;&quot;;
+}
+echo &quot;&lt;/tr&gt;\\n&quot;;
+}
+fclose($g);
+echo &quot;\\n&lt;/table&gt;&quot;;
+?&gt;]]></value></item><item><title><![CDATA[seniors2022]]></title><slug>seniors2022</slug><value><![CDATA[&lt;?php
+echo &quot;&lt;table&gt;\\n\\n&quot;;
+$h = fopen(&quot;data/uploads/collegechoices/seniors2022.csv&quot;, &quot;r&quot;);
+while (($line = fgetcsv($f)) !== false) {
+echo &quot;&lt;tr&gt;&quot;;
+foreach ($line as $cell) {
+echo &quot;&lt;td&gt;&quot; . htmlspecialchars($cell) . &quot;&lt;/td&gt;&quot;;
+}
+echo &quot;&lt;/tr&gt;\\n&quot;;
+}
+fclose($h);
+echo &quot;\\n&lt;/table&gt;&quot;;
+?&gt;]]></value></item><item><title><![CDATA[Sidebar]]></title><slug>sidebar</slug><value><![CDATA[&lt;h2&gt;GetSimple Features&lt;/h2&gt;
+&lt;ul&gt; 
+&lt;li&gt;XML based data storage&lt;/li&gt; 
+&lt;li&gt;Best-in-Class User Interface&lt;/li&gt; 
+&lt;li&gt;&#039;Undo&#039; protection &amp;amp; backups&lt;/li&gt; 
+&lt;li&gt;Easy to theme&lt;/li&gt; 
+&lt;li&gt;Great documentation&lt;/li&gt; 
+&lt;li&gt;Growing community&lt;/li&gt; 
+&lt;/ul&gt;
+&lt;p&gt;This is your sidebar text. Please change me in &lt;em&gt;Theme -&gt; Edit Components&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://get-simple.info/download/&quot;&gt;Download the Latest GetSimple&lt;/a&gt;&lt;/p&gt;]]></value></item><item><title><![CDATA[Tagline]]></title><slug>tagline</slug><value><![CDATA[Just Another GetSimple Website]]></value></item></channel>
