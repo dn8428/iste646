@@ -424,7 +424,6 @@ a {
     opacity: 0;
     flex-direction: column;
     text-align: center;
-    z-index: 2;
     animation-name: swipeIn;
     animation-duration: 1s;
 }

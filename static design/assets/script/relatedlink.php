@@ -31,50 +31,51 @@ $_SESSION['rootPath'] = '../../';
     ?>
 
 
-    <!--  Placeholder for main contents  -->
-    <div class="main-content">
-        <div class="title">
-            <div class="ttlContainer">
-                <h1 class="mainTitle">Related Links</h1>
-                <div class="subTitle">For the best online recommendations, visit our friends and start discovering
-                    today.
+    <div class="link-wrap">
+        <!--  Placeholder for main contents  -->
+        <div class="link-main-content">
+            <div class="title">
+                <div class="ttlContainer">
+                    <h1 class="mainTitle">Related Links</h1>
+                    <div class="subTitle">For the best online recommendations, visit our friends and start discovering
+                        today.
+                    </div>
+                </div>
+                <div class="imgContainer">
+                    <img class="mainImage" src="../../assets/img/link-main.png" alt="link-main"/>
                 </div>
             </div>
-            <div class="imgContainer">
-                <img class="mainImage" src="../../assets/img/link-main.png" alt="link-main"/>
-            </div>
+
+
         </div>
 
+        <div class="link-container">
+            <div class="card-container">
 
-    </div>
+                <?php
 
-    <div class="link-container">
-        <div class="card-container">
-
-            <?php
-
-            $DUMMY_RELATED_LINKS = [[
-                'title' => 'National Academic Quiz Tournament',
-                'info' => 'The National Academic Quiz Tournament is a highly competitive and prestigious
+                $DUMMY_RELATED_LINKS = [[
+                    'title' => 'National Academic Quiz Tournament',
+                    'info' => 'The National Academic Quiz Tournament is a highly competitive and prestigious
                             intercollegiate competition that tests participants on a wide range of academic subjects and
                             knowledge.',
-                'img' => 'related-link-1.png'
-            ], [
-                'title' => 'Capital Region BOCES',
-                'info' => 'Capital Region BOCES offers diverse educational programs and services to support school districts in the Capital Region of New York State, including career and technical education, special education, and instructional support.',
-                'img' => 'related-link-2.png'
-            ], [
-                'title' => 'Academic Challenge Bowl',
-                'info' => 'The Academic Challenge Bowl is a competitive academic tournament that tests the knowledge and skills of high school students in a variety of subjects.',
-                'img' => 'related-link-3.png'
-            ], [
-                'title' => 'Monroe 2-Orleans BOCES',
-                'info' => 'Monroe 2-Orleans BOCES provides a range of educational services and programs to school districts in the Monroe 2 and Orleans regions of New York State.',
-                'img' => 'related-link-4.png'
-            ]];
+                    'img' => 'related-link-1.png'
+                ], [
+                    'title' => 'Capital Region BOCES',
+                    'info' => 'Capital Region BOCES offers diverse educational programs and services to support school districts in the Capital Region of New York State, including career and technical education, special education, and instructional support.',
+                    'img' => 'related-link-2.png'
+                ], [
+                    'title' => 'Academic Challenge Bowl',
+                    'info' => 'The Academic Challenge Bowl is a competitive academic tournament that tests the knowledge and skills of high school students in a variety of subjects.',
+                    'img' => 'related-link-3.png'
+                ], [
+                    'title' => 'Monroe 2-Orleans BOCES',
+                    'info' => 'Monroe 2-Orleans BOCES provides a range of educational services and programs to school districts in the Monroe 2 and Orleans regions of New York State.',
+                    'img' => 'related-link-4.png'
+                ]];
 
-            foreach ($DUMMY_RELATED_LINKS as $index => $relatedLink) {
-                echo '<div class="link-card">
+                foreach ($DUMMY_RELATED_LINKS as $index => $relatedLink) {
+                    echo '<div class="link-card">
                 <div class="link-img-container">
                     <img src="' . $_SESSION['rootPath'] . 'assets/img/' . $relatedLink['img'] . '"
                          alt="rl-img' . $index . '">
@@ -86,11 +87,12 @@ $_SESSION['rootPath'] = '../../';
                     </div>
                 </div>
             </div>';
-            }
+                }
 
 
-            ?>
+                ?>
 
+            </div>
         </div>
     </div>
 
