@@ -25,7 +25,7 @@
 					<nav>
 						<ul>
 							<li>
-								<a href="/index.html">Home</a>
+								<a href="../../../index.php">Home</a>
 							</li>
 							<li class="dropdown">
 								<div class="dropWrap">
@@ -38,7 +38,7 @@
 								</div>
 							</li>
 							<li>
-								<a href="./index.html">General Information</a>
+								<a href="./index.php">General Information</a>
 							</li>
 							<li class="dropdown">
 								<div class="dropWrap">
@@ -845,25 +845,25 @@
 							</div>
 
 							<div class="form-item">
-								<h4><a href="./Pages/pre-season.html" target="_blank">Pre-season</a></h4>
+								<h4><a href="./Pages/pre-season.php" target="_blank">Pre-season</a></h4>
 							</div>
 							<div class="form-item">
-								<h4><a href="./Pages/pre-season.html" target="_blank">Program Info</a></h4>
+								<h4><a href="./Pages/pre-season.php" target="_blank">Program Info</a></h4>
 							</div>
 							<div class="form-item">
-								<h4><a href="./Pages/pre-season.html" target="_blank">End-of-season-form-container</a></h4>
+								<h4><a href="./Pages/pre-season.php" target="_blank">End-of-season-form-container</a></h4>
 							</div>
 							<div class="form-item">
-								<h4><a href="./Pages/pre-season.html" target="_blank">Prescheduling-specials-initial</a></h4>
+								<h4><a href="./Pages/pre-season.php" target="_blank">Prescheduling-specials-initial</a></h4>
 							</div>
 							<div class="form-item">
-								<h4><a href="./Pages/pre-season.html" target="_blank">Playoffs</a></h4>
+								<h4><a href="./Pages/pre-season.php" target="_blank">Playoffs</a></h4>
 							</div>
 							<div class="form-item">
-								<h4><a href="./Pages/pre-season.html" target="_blank">Miscellaneous</a></h4>
+								<h4><a href="./Pages/pre-season.php" target="_blank">Miscellaneous</a></h4>
 							</div>
 							<div class="form-item">
-								<h4><a href="./Pages/pre-season.html" target="_blank">Contact us</a></h4>
+								<h4><a href="./Pages/pre-season.php" target="_blank">Contact us</a></h4>
 							</div>
 						</div>
 					</div>
