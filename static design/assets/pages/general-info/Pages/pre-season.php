@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="../style/pre-season.css">
   <!-- style pertaining to the home page -->
   <link rel="stylesheet" href="../../../css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>pre-season</title>
 </head>
 
@@ -212,7 +213,7 @@
             <tfoot>
               <tr>
                 <th>Contact</th>
-                <td colspan="4"><i>What are you waiting for? Get Started now for free</i></td>
+                <td colspan="4"><i>For more Information reach out </i></td>
               </tr>
             </tfoot>
           </table>
@@ -253,7 +254,7 @@
             <tfoot>
               <tr>
                 <th>Contact</th>
-                <td colspan="4"><i>What are you waiting for? Get Started now for free</i></td>
+                <td colspan="4"><i>For more Information reach out </i></td>
               </tr>
             </tfoot>
           </table>
@@ -317,7 +318,7 @@
             <tfoot>
               <tr>
                 <th>Contact</th>
-                <td colspan="4"><i>What are you waiting for? Get Started now for free</i></td>
+                <td colspan="4"><i>For more Information reach out </i></td>
               </tr>
             </tfoot>
           </table>
@@ -358,17 +359,39 @@
             <tfoot>
               <tr>
                 <th>Contact</th>
-                <td colspan="4"><i>What are you waiting for? Get Started now for free</i></td>
+                <td colspan="4"><i>For more Information reach out </i></td>
               </tr>
             </tfoot>
           </table>
         </div>
         <div class="table-container-6">
-          <h2>Miscellanous Forms</h2>
+          <!-- <h2>Miscellanous Forms</h2> -->
         </div>
       </div>
     </div>
-    <div class="footer-container"></div>
+    <!-- <div class="footer-container"></div> -->
+
+    <footer class="footer">
+            <div class="footer-container">
+            <div class=nav-container>
+                <a href="../../../index.php" target="_blank">Home</a>
+                <a href="#" target="_blank">Program</a>
+                <a href="#" target="_blank">General</a>
+                <a href="#" target="_blank">League</a>
+                <a href="#" target="_blank">Teams</a>
+                <a href="#" target="_blank">Contact</a>
+                <a href="#" target="_blank">related links</a>
+                <a href="#" target="_blank">store</a>
+            </div>
+            <div class="social-icons-container">
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-google"></a>
+                <a href="#" class="fa fa-youtube"></a>
+                <a href="#" class="fa fa-instagram"></a>
+            </div>
+            </div>
+        </footer>
   </div>
 </body>
 

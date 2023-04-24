@@ -44,7 +44,7 @@
                                 </div>
                             </li>
                             <li>
-                                <a href="./assets/pages/general-info/index.html" target="_blank">General Information</a>
+                                <a href="./assets/pages/general-info/index.php" target="_blank">General Information</a>
                             </li>
                             <li class="dropdown">
                                 <div class="dropWrap">
