@@ -1,6 +1,6 @@
 /******************** main page  *****************************/
 
-.body-main-container{
+.body-main-container {
     /*display: grid;*/
     /*grid-auto-rows:190px auto 1fr ;*/
     width: 100vw;
@@ -8,6 +8,7 @@
     flex-direction: column;
     justify-content: center;
 }
+
 .main-container {
     width: 100%;
     display: flex;
@@ -27,117 +28,123 @@
     margin: 20px 0;
     /* background-color: lightpink; */
 }
+
 /* main image */
-.image-container{
+.image-container {
     width: 95%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.image-container img{
+.image-container img {
     max-width: 100%;
     height: 80%
-   
+
 }
 
-.main-section{
+.main-section {
     width: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
 }
+
 /* special event container */
-.special-events-container{
+.special-events-container {
     display: flex;
     flex-direction: column;
-    align-items: stretch;;
+    align-items: stretch;
     width: 100%;
 }
-.events-container{
+
+.events-container {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     margin: 10px 0;
     /* height: 60%; */
-    
+
 }
 
-.events-1{
-    display:flex;
+.events-1 {
+    display: flex;
     flex-direction: column;
     /* align-items: center;
     height: 350px; */
     height: 450px;
     width: 400px;
 }
+
 /* Specials event images */
-.events-1 img{
+.events-1 img {
     width: 100%;
     height: 65%;
 }
 
-.events-1 img:hover{
+.events-1 img:hover {
     transform: scale(1.1);
     transition: 0.5s;
     cursor: pointer;
 }
-.events-title{
+
+.events-title {
     text-align: center;
 }
 
 /* Overview section */
 
-.text-container-title {  
+.text-container-title {
     width: 100%;
     text-align: center;
     background-color: #66AA9C;
 }
 
-.text-container-title h3{
+.text-container-title h3 {
     margin: 10px 10px;
     color: white;
 }
-.home-text-container{
+
+.home-text-container {
     display: flex;
     flex-direction: column;
     width: 100%
 }
 
-.text ul{
+.text ul {
     padding-left: 1px;
 }
 
-.text-wrapper{
+.text-wrapper {
     display: flex;
     flex-direction: row;
     /* gap: 15px; */
-    justify-content:space-evenly;
+    justify-content: space-evenly;
 }
 
-.text-container{
+.text-container {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.text{
+.text {
     width: 500px;
     height: 250px;
     overflow: auto;
 }
-.deadline-item{
+
+.deadline-item {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
-    gap:  20px;
+    gap: 20px;
 }
 
 
 /********************* main content side Section *****************************************/
-
 
 
 /********************* main-style *****************************/
@@ -196,8 +203,6 @@ a {
 }
 
 
-
-
 /******************** navbar  *****************************/
 /* Container for the whole navbar */
 .nav_container {
@@ -214,15 +219,17 @@ a {
 
 /* Container for the logo image */
 .logo_container {
-    height: 65px;
+    height: clamp(45px, 4.2vw, 80px);
     margin: 0 1vw;
     display: flex;
     align-items: center;
 }
 
 .logo_container img {
-    width: 50px;
-    height: 50px;
+    height: clamp(28px, 2.6vw, 50px);
+    aspect-ratio: initial;
+    /*width: 50px;*/
+    /*height: 50px;*/
 }
 
 
@@ -236,7 +243,7 @@ a {
     justify-content: space-between;
 }
 
-.navbar nav{
+.navbar nav {
     width: 100%;
     display: flex;
     align-items: center;
@@ -247,10 +254,12 @@ a {
     color: #EEF2F0;
 }
 
-
+/*.nav-menu {*/
+/*    display: flex;*/
+/*}*/
 
 /* The verticle line between 'Teams' and 'Contact'  */
-#nav-divider::before{
+#nav-divider::before {
     content: '';
     display: flex;
     height: 2rem;
@@ -259,10 +268,11 @@ a {
     position: absolute;
     margin-left: -8%;
 }
+
 /**/
 
 
-.navbar ul{
+.navbar ul {
     width: 100%;
     height: 100%;
     margin: 0;
@@ -338,6 +348,125 @@ a {
     opacity: 1;
     transition-duration: 500ms;
 }
+
+/* Hamburger menu */
+.hamburger-nav {
+    height: 100%;
+    display: none;
+    align-items: center;
+    z-index: 4;
+}
+
+/* Expand to full view after clicked */
+.open .hamburger-nav {
+    width: 100vw;
+}
+
+/* Wrap the hamburger icon so that the entire area could be clicked */
+.hamburger-wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* The hamburger menu icon */
+.hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: -20px;
+    width: 25px;
+    height: 8px;
+}
+
+.line {
+    width: 100%;
+    height: 2px;
+    background-color: #EEF2F0;
+    transition: transform 0.2s ease;
+}
+
+.line-1 {
+    transform: translateY(0px);
+}
+
+.line-2 {
+    transform: translateY(8px);
+}
+
+.line-3 {
+    transform: translateY(16px);
+}
+
+/* Reshape into X shape after clicked */
+.open .line-1 {
+    transform: translateY(8px) rotate(-45deg);
+}
+
+.open .line-2 {
+    opacity: 0;
+}
+
+.open .line-3 {
+    transform: translateY(3px) rotate(45deg);
+}
+
+/* Dropdown menu after hamburger clicked */
+.menu {
+    width: 100vw;
+    background-color: #66AA9C;
+    position: absolute;
+    top: clamp(45px, 4.2vw, 80px);;
+    left: 0;
+    display: none;
+    opacity: 0;
+    flex-direction: column;
+    text-align: center;
+    z-index: 2;
+    animation-name: swipeIn;
+    animation-duration: 1s;
+}
+
+.menu ul {
+    list-style-type: none;
+    flex-direction: column;
+}
+
+.menu li {
+    padding: 20px;
+}
+
+
+/* Swipe in animation for menu block */
+@keyframes swipeIn {
+    0% {
+        transform: translateY(-200px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+
+/**/
+
+/* Responsive for navbar */
+@media only screen and (max-width: 900px) {
+    .navbar nav {
+        display: none;
+    }
+
+    .hamburger-nav {
+        display: flex;
+    }
+
+}
+
+/**/
+
+
 /******************** scorebar  *****************************/
 /* Main container for the scorebar */
 .scorebar-container {
@@ -349,7 +478,7 @@ a {
     justify-content: center;
     /* position: fixed; */
     margin-top: 70px;
-    
+
 }
 
 /* To restrict the scorebar in the middle 90% part of page width */
@@ -453,19 +582,17 @@ a {
 }
 
 /* healines section */
-.headline-title, .quick-links-title{
+.headline-title, .quick-links-title {
     background-color: #75C2B2;
     text-align: center;
     color: white;
 }
 
-.headlines-container, .links-container{
+.headlines-container, .links-container {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
-
-
 
 
 /******************** footer  *****************************/
@@ -484,7 +611,7 @@ a {
     display: flex;
     flex-direction: column;
     /* align-items:center; */
-    justify-content:center;
+    justify-content: center;
     margin: auto;
     position: absolute;
 }
@@ -501,10 +628,10 @@ a {
 }
 
 /* social media icons */
-.social-icons-container{
+.social-icons-container {
     display: flex;
     flex-direction: row-reverse;
-    
+
 }
 
 .fa {
@@ -515,36 +642,36 @@ a {
     text-decoration: none;
     margin: 5px 2px;
     border-radius: 50%;
-  }
+}
 
-  .fa:hover {
+.fa:hover {
     opacity: 0.7;
 }
 
 .fa-facebook {
     background: #3B5998;
     color: white;
-  }
-  
-  .fa-twitter {
+}
+
+.fa-twitter {
     background: #55ACEE;
     color: white;
-  }
-  
-  .fa-google {
+}
+
+.fa-google {
     background: #dd4b39;
     color: white;
-  }
+}
 
-  .fa-youtube {
+.fa-youtube {
     background: #bb0000;
     color: white;
-  }
-  
-  .fa-instagram {
+}
+
+.fa-instagram {
     background: #125688;
     color: white;
-  }
+}
 
 
 

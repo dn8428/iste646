@@ -19,9 +19,7 @@ $_SESSION['rootPath'] = "./";
     <link rel="stylesheet" type="text/css" href="./assets/css/mastermind-footer.css"/>
     <link rel="stylesheet" type="text/css" href="./assets/css/mastermind-scorebar.css"/> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <link rel="stylesheet" type="text/css" href="<?php echo $_SESSION['rootPath']?>assets/css/style.css">
-
+    <link rel="stylesheet" type="text/css" href="<?php echo $_SESSION['rootPath'] ?>assets/css/style.css">
 
 
     <title>MasterMinds</title>
@@ -111,6 +109,7 @@ $_SESSION['rootPath'] = "./";
 
 
                 </div>
+
             </div>
         </div>
     </div>
@@ -229,31 +228,21 @@ $_SESSION['rootPath'] = "./";
                             <h3>Deadlines</h3>
                         </div>
                         <div class="text">
-                            <div class="text">
-                                <div class="deadline-item">
-                                    <h4>Albany:</h4>
-                                    <p>Friday, September 23, 2022</p>
-                                </div>
-                                <div class="deadline-item">
-                                    <h4>Binghamton:</h4>
-                                    <p>Friday, November 4, 2022</p>
-                                </div>
-                                <div class="deadline-item">
-                                    <h4>Buffalo:</h4>
-                                    <p>Friday, September 23, 2022</p>
-                                </div>
-                                <div class="deadline-item">
-                                    <h4>Rochester:</h4>
-                                    <p>Friday, September 23, 2022</p>
-                                </div>
-                                <div class="deadline-item">
-                                    <h4>Syracuse:</h4>
-                                    <p>Friday, October 7, 2022</p>
-                                </div>
-                                <div class="deadline-item">
-                                    <h4>Plattsburgh:</h4>
-                                    <p>Thursday, November 10, 2022</p>
-                                </div>
+                            <div class="deadline-item">
+                                <h4>Albany:</h4>
+                                <p>Friday, September 23, 2022</p>
+                            </div>
+                            <div class="deadline-item">
+                                <h4>Binghamton:</h4>
+                                <p>Friday, November 4, 2022</p>
+                            </div>
+                            <div class="deadline-item">
+                                <h4>Buffalo:</h4>
+                                <p>Friday, September 23, 2022</p>
+                            </div>
+                            <div class="deadline-item">
+                                <h4>Rochester:</h4>
+                                <p>Friday, September 23, 2022</p>
                             </div>
                             <div class="deadline-item">
                                 <h4>Syracuse:</h4>
@@ -355,11 +344,13 @@ $_SESSION['rootPath'] = "./";
                 </div>
             </div>
 
+
             <div class="resource-container-2"></div>
 
         </div>
+
     </div>
-    
+
     <footer class="footer">
         <div class="footer-container">
             <div class=nav-container>
