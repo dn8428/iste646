@@ -1,3 +1,8 @@
+<?php
+$_SESSION['rootPath'] = '../../';
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,10 +10,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" type="text/css" href="../../assets/css/style.css"/>
-    <link rel="stylesheet" type="text/css" href="../../assets/css/mastermind-main-page.css"/>
-    <link rel="stylesheet" type="text/css" href="../../assets/css/mastermind-navbar.css"/>
-    <link rel="stylesheet" type="text/css" href="../../assets/css/mastermind-footer.css"/>
+    <link rel="stylesheet" type="text/css" href="<?php echo $_SESSION['rootPath']; ?>assets/css/style.css"/>
+    <link rel="stylesheet" type="text/css"
+          href="<?php echo $_SESSION['rootPath']; ?>assets/css/mastermind-main-page.css"/>
+    <link rel="stylesheet" type="text/css" href="<?php echo $_SESSION['rootPath']; ?>assets/css/mastermind-footer.css"/>
+    <script src="<?php echo $_SESSION['rootPath']; ?>assets/js/main.js"></script>
 
 
     <title>MasterMinds</title>
