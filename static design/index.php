@@ -13,9 +13,14 @@ $_SESSION['rootPath'] = "./";
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- <link rel="stylesheet" type="text/css" href="./assets/css/mastermind-main-style.css"/>
+    <link rel="stylesheet" type="text/css" href="./assets/css/mastermind-main-page.css"/>
+    <link rel="stylesheet" type="text/css" href="./assets/css/mastermind-navbar.css"/>
+    <link rel="stylesheet" type="text/css" href="./assets/css/mastermind-footer.css"/>
+    <link rel="stylesheet" type="text/css" href="./assets/css/mastermind-scorebar.css"/> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="<?php echo $_SESSION['rootPath'] ?>assets/css/style.css">
-    <script src="<?php echo $_SESSION['rootPath']; ?>assets/js/main.js"></script>
+
 
     <title>MasterMinds</title>
 </head>
