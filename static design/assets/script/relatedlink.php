@@ -10,10 +10,12 @@ $_SESSION['rootPath'] = '../../';
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="<?php echo $_SESSION['rootPath']; ?>assets/css/style.css"/>
     <link rel="stylesheet" type="text/css"
           href="<?php echo $_SESSION['rootPath']; ?>assets/css/mastermind-main-page.css"/>
-    <link rel="stylesheet" type="text/css" href="<?php echo $_SESSION['rootPath']; ?>assets/css/mastermind-footer.css"/>
+    <!--    <link rel="stylesheet" type="text/css" href="-->
+    <?php //echo $_SESSION['rootPath']; ?><!--assets/css/mastermind-footer.css"/>-->
     <script src="<?php echo $_SESSION['rootPath']; ?>assets/js/main.js"></script>
 
 
@@ -99,11 +101,10 @@ $_SESSION['rootPath'] = '../../';
 </div>
 
 
-<footer class="footer">
-    <div>
-        <a>Thank you !</a>
-    </div>
-</footer>
+<?php
+include($_SESSION['rootPath'] . "assets/inc/footer.php");
+?>
+
 
 </body>
 </html>
