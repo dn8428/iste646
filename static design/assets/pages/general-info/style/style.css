@@ -1,0 +1,305 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap');
+
+
+html {
+    font-family: "Source+Serif+Pro", sans-serif;
+   
+}
+
+
+.body-container {
+    
+    background-color: rgb(255, 255, 255);
+    font-size: 1em;
+    
+
+    display: grid;
+    grid-auto-rows: 100px auto 100px;
+}
+
+h1{
+    font-size: 2.5em !important;
+}
+
+
+
+/******************************************  Main Section  **********************/
+
+.main-section-container {
+    display: grid;
+    grid-template-columns: 6fr 1.5fr
+}
+
+h1 {
+    text-align: center;
+}
+
+.general-container {
+    display: grid;
+    grid-auto-rows: auto auto auto auto;
+    /* background-color: #717171; */
+    margin: 10px;
+}
+
+/******************************************  Testimonials  **********************/
+
+.testimonials-container {
+    padding: 30px
+}
+
+/* Slideshow container */
+.slideshow-container {
+    position: relative;
+    background: #f1f1f1f1;
+    border-radius: 30px;
+    /* box-shadow: 5px 5px 5px #888888; */
+    box-shadow: #888888 0px 1px 4px;
+    /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
+}
+
+/* Slides */
+.mySlides {
+    display: none;
+    padding: 50px;
+    text-align: center;
+
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -30px;
+    padding: 16px;
+    color: rgb(152, 210,198);
+    font-weight: bold;
+    font-size: 40px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    position: absolute;
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+    text-align: center;
+    padding: 10px;
+    /* background: #ddd; */
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active,
+.dot:hover {
+    background-color: rgb(152, 210,198);
+}
+
+/* Add an italic font style to all quotes */
+q {
+    font-style: italic;
+    font-size: 15px;
+    line-height: 2rem;
+}
+
+q {
+    font-family: Georgia, serif;
+    position: relative;
+    margin: 0.5em;
+    padding: 0.5em 2em 0.5em 3em;
+}
+
+/* Thanks: http://callmenick.com/post/styling-qs-with-css-pseudo-classes */
+q:before {
+    font-family: Georgia, serif;
+    position: relative;
+    font-size: 3em;
+    line-height: 3rem;
+    top: 0;
+    left: 0;
+    /* content: "\201C"; */
+}
+
+q:after {
+    font-family: Georgia, serif;
+    position: absolute;
+    ;
+    /* display: block; don't use this, it raised the quote too high from the bottom - defeated line-height? */
+    float: right;
+    font-size: 3em;
+    line-height: 3rem;
+    right: 0;
+    bottom: -0.4em;
+    /* content: "\201D"; */
+}
+
+/* q footer {
+    padding: 0 1em 0 0;
+    text-align:right;
+} */
+/* q cite:before {
+    content: "\2013";
+} */
+
+/* Add a blue color to the author */
+.author {
+    color: rgb(93, 131, 255);
+    font-size: 15px;
+}
+
+.program-info-Logistic-container p {
+    line-height: 1.5em;
+}
+
+
+/******************************************  Ressources /side panel **********************/
+
+/* .side-panel{
+    display: flex;
+    flex-direction: column;
+    
+    gap: 10px;
+    
+} */
+.side-panel-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 10px;
+    width: 90%;
+}
+
+.deadlines-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    background-color: #f1f1f1f1;
+    ;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset !important;
+}
+
+.deadlines-container h3{
+    margin-top: 2px;
+}
+
+.deadline-items-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.items {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: fit-content;}
+
+.items h4 {
+    padding: 0px;
+    margin: 5px;
+}
+
+.items p {
+    padding: 0px;
+    margin: 0px;
+}
+
+.forms-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    background-color: #f1f1f1f1;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset !important;
+}
+
+.forms-container h3{
+    margin-top: 2px;
+}
+
+.form-items-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%
+}
+
+.form-item h4 {
+    padding: 0px;
+    margin: 10px;
+    display: flex;
+
+}
+
+.headline-title{
+    background-color: #66AA9C;
+    width : 100%;
+}
+.headline-title h2{
+    text-align: center;
+    text-decoration: none;
+    margin: 3.5px;
+    color: white;
+}
+
+/*********************************** general information section ***********************************/
+
+
+.program-info-Logistic-container{
+    display: flex;
+    flex-direction: column;
+    
+    gap: 20px;
+    
+    
+}
+.history-container, 
+.overview-container, 
+.what-master-mind-is-container, 
+.organization-container,
+.rules-container,
+.partnership-info-container{
+    background-color: #f1f1f1f1;
+    border-radius: 10px;
+    box-shadow: #888888 0px 1px 4px;
+    padding: 15px;
+}
+
+/*********************************** footer section ***********************************/
+
+
+
+
