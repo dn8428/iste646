@@ -78,6 +78,15 @@ function create_league_file($year, $region, $id)
 
 		$note = $xml->addChild('title');
 		$note->addCData($title);
+
+      $note = $xml->addChild('year');
+		$note->addCData($year);
+
+      $note = $xml->addChild('region');
+		$note->addCData($region);
+
+      $note = $xml->addChild('id');
+		$note->addCData($id);
 		
 		$note = $xml->addChild('content');
 		$note->addCData("");
@@ -88,9 +97,10 @@ function create_league_file($year, $region, $id)
 
 function edit_league_show() {
    create_data_folder();
-   $year = date('y');
+   $year = date('Y');
    $region = 'Albany';
    $regionalId = '1';
+   $firsttime = true;
    if(!empty($_POST['year']) &&
       !empty($_POST['region'] &&
       !empty($_POST['regionalId']))) 
@@ -98,6 +108,7 @@ function edit_league_show() {
       $year = filter_var($_POST['year'], FILTER_SANITIZE_NUMBER_INT);
       $region = filter_var($_POST['region'], FILTER_SANITIZE_STRING);
       $regionalId = filter_var($_POST['regionalId'], FILTER_SANITIZE_NUMBER_INT);
+      $firsttime = false;
    }
    ?>
    <script>
@@ -135,20 +146,22 @@ function edit_league_show() {
       </form>
       <hr>
    <?php
-
-   if(create_year_folder($year))
+   if(!$firsttime)
    {
-      ?>
-      <div class="editItem">
-         <p>Created a new year...</p>
-      </div>
-      <?php
-   }
-   if(create_league_file($year, $region, $regionalId))
-   {
-      ?>
-         <p>File exists</p>
-      <?php
+      if(create_year_folder($year))
+      {
+         ?>
+         <div class="editItem">
+            <p>Created a new year...</p>
+         </div>
+         <?php
+      }
+      if(create_league_file($year, $region, $regionalId))
+      {
+         ?>
+            <p>File exists</p>
+         <?php
+      }
    }
 }
 ?>
