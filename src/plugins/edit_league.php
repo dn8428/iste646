@@ -64,7 +64,7 @@ function create_league_file($year, $level, $region, $id)
 
    $title = $region . " " . $id;
    
-   // Save the file (assuming that the folder indeed exists)
+   // Save the file
    if (!$file_exists) {
 		$xml = new SimpleXMLExtended('<?xml version="1.0" encoding="UTF-8"?><item></item>');
 		$xml->addChild('pubDate', date('r'));
@@ -168,23 +168,24 @@ function edit_league_show() {
          </div>
          <?php
       }
+      // $content = '';
       if(create_league_file($year, $level, $region, $regionalId))
       {
          $thisfile=basename(__FILE__, ".php");
-         $folder        = GSDATAOTHERPATH . '/' . $thisfile . '/' . $year . '/' . $level . '/';
+         $folder        = GSDATAOTHERPATH . $thisfile . '/' . $year . '/' . $level . '/';
          $filename      = $folder . $region . $regionalId . ".xml";
          $xml = getXML($folder . $filename);
-
+         
          $content = stripslashes($xml->content);
          
-         if(isset($_POST['post-content']))
+         if(!empty($_POST['post-content']))
          {	
             $post_content = safe_slash_html($_POST['post-content']);   
             $content = $post_content;
 
             // create new XML file
             $new_xml = new SimpleXMLExtended('<?xml version="1.0" encoding="UTF-8"?><item></item>');
-            $new_xml->addChild('pubDate', $xml->pubDate);
+            $new_xml->addChild('pubDate', date('r'));
       
             $note = $new_xml->addChild('title');
             $note->addCData($xml->title);
@@ -222,25 +223,10 @@ function edit_league_show() {
       
       <?php exec_action('edit-content'); ?> 
       
-      <span class="editing"><?php echo i18n_r('EDITPAGE_TITLE') .': ' . $title; ?></span>
       <div id="submit_line" >
          <input type="hidden" name="redirectto" value="" />
          
          <span><input id="page_submit" class="submit" type="submit" name="submitted" value="<?php echo $buttonname; ?>" /></span>
-         
-         <div id="dropdown">
-            <h6 class="dropdownaction"><?php i18n('ADDITIONAL_ACTIONS'); ?></h6>
-            <ul class="dropdownmenu">
-               <li id="save-close" ><a href="#" ><?php i18n('SAVE_AND_CLOSE'); ?></a></li>
-               <?php if($url != '') { ?>
-                  <li><a href="pages.php?id=<?php echo $url; ?>&amp;action=clone&amp;nonce=<?php echo get_nonce("clone","pages.php"); ?>" ><?php i18n('CLONE'); ?></a></li>
-               <?php } ?>
-               <li id="cancel-updates" class="alertme"><a href="pages.php?cancel" ><?php i18n('CANCEL'); ?></a></li>
-               <?php if($url != 'index' && $url != '') { ?>
-                  <li class="alertme" ><a href="deletefile.php?id=<?php echo $url; ?>&amp;nonce=<?php echo get_nonce("delete","deletefile.php"); ?>" ><?php echo strip_tags(i18n_r('ASK_DELETE')); ?></a></li>
-               <?php } ?>
-            </ul>
-         </div>
          
       </div>
       
@@ -271,7 +257,7 @@ function edit_league_show() {
 					<?php } ?>
 					entities : false,
 					// uiColor : '#FFFFFF',
-					height: '<?php echo $EDHEIGHT; ?>',
+					height: '500px',
 					baseHref : '<?php echo $SITEURL; ?>',
 					tabSpaces:10,
 					filebrowserBrowseUrl : 'filebrowser.php?type=all',
