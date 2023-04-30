@@ -90,7 +90,7 @@ html {
 :: selection {
 	text-shadow: none !important;
 	background: #a8d1ff;
-	color: #111;
+	col1`or: #111;
 }
 
 :: -moz-selection {
