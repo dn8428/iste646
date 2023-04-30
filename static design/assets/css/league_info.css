@@ -1,17 +1,113 @@
-.league-container {
-    margin-top: 120px;
-    /*position: relative;*/
+a {
+    color: #000000;
 }
 
+/*grid container for this league info page*/
+.page {
+    box-sizing: border-box;
+    max-width: 100%;
+    padding-left: .75rem;
+    padding-right: .75rem;
+    margin: 0;
+    margin-top: clamp(45px, 4.2vw, 80px);
+    display: grid;
+    grid-template-columns: 15% 85%;
+    grid-template-rows: auto auto;
+    grid-template-areas: "year year"
+                      "leagues content";
+}
+
+/*css for the top year navigating bar*/
+.years {
+    background-color: #66AA9C;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .12), 0 1px 2px 0 rgba(0, 0, 0, .24);
+    display: flex;
+    flex-direction: row;
+    grid-area: year;
+    justify-content: space-between;
+    padding: 0px 30px;
+}
+
+.menu__link {
+    padding: 1.5rem 2.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.menu__link:not(:last-child) {
+    text-decoration: none;
+}
+
+/*css for the left side league bar*/
+.leagues {
+    grid-area: leagues;
+    background-color: #75C2B2;
+    padding-top: 30px;
+}
+
+.leagues ul {
+    list-style: none;
+}
+
+.league_list {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    text-decoration: none;
+    font-size: 200%;
+    background-color: #66AA9C;
+    margin-bottom: 50px;
+    padding: 10px;
+    max-width: 90%;
+}
+
+/*css for the league-info1 page*/
+#allleagues {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+}
+
+.clickable-div {
+    cursor: pointer;
+    background-color: #ccc;
+    color: #333;
+    padding: 10px;
+}
+
+.eachleague {
+    flex-basis: 30%;
+    margin: 30px 10px 10px 50px;
+    background-color: #E3F9F4;
+}
+
+.eachleague h2, .eachleague p {
+    padding-left: 40px;
+    max-width: 60%;
+    text-align: center;
+}
+
+.eachleague h2 {
+    font-size: 200%;
+    padding-bottom: 20px;
+}
+
+.eachleague p {
+    font-size: 180%;
+}
+
+/*css for the league-info2 page*/
 #grid-container-content {
-    position: relative;
+    grid-area: content;
     display: grid;
     grid-template-columns: 10% 80% 10%;
     grid-template-rows: auto auto auto auto;
-    grid-template-areas: ". header ."
-                      ". standing ."
-                      ". rotation ."
-                     ". scorer .";
+    grid-template-areas: "header header ."
+                      "standing standing ."
+                      "rotation rotation ."
+                     "scorer scorer .";
+    text-align: left;
+    padding-left: 80px;
 }
 
 #header {
@@ -39,8 +135,8 @@ hr {
     max-width: 30%;
 }
 
-table {
-    background-color: yellow;
+#standing table, #scorer table {
+    background-color: #E3F9F4;
 }
 
 table, th, td {

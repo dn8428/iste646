@@ -1,6 +1,6 @@
 <?php
-
 $_SESSION['rootPath'] = '../../';
+
 ?>
 
 <!DOCTYPE html>
@@ -9,12 +9,10 @@ $_SESSION['rootPath'] = '../../';
     <title>League Info</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="<?php echo $_SESSION['rootPath'] ?>assets/css/league_info.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="<?php echo $_SESSION['rootPath']; ?>assets/css/league_info.css">
+
     <link rel="stylesheet" type="text/css" href="<?php echo $_SESSION['rootPath']; ?>assets/css/style.css"/>
-    <link rel="stylesheet" type="text/css"
-          href="<?php echo $_SESSION['rootPath']; ?>assets/css/mastermind-main-page.css"/>
-    <script src="<?php echo $_SESSION['rootPath']; ?>assets/js/main.js"></script>
+
 </head>
 <body>
 
@@ -22,15 +20,36 @@ $_SESSION['rootPath'] = '../../';
     <!--  Navbar  -->
     <?php
 
-    $_SESSION['rootPath'] = "../../";
     include($_SESSION['rootPath'] . "assets/inc/navbar.php");
 
     ?>
 </div>
 
-<div class="league-container">
 
-
+<div class="page">
+    <nav class="years">
+        <a href="#" class="menu__link">2022-23</a></li>
+        <a href="#" class="menu__link">2021-22</a></li>
+        <a href="#" class="menu__link">2020-21</a></li>
+        <a href="#" class="menu__link">2021-20</a></li>
+        <a href="#" class="menu__link">2020-19</a></li>
+        <a href="#" class="menu__link">2019-18</a></li>
+        <a href="#" class="menu__link">2018-17</a></li>
+        <a href="#" class="menu__link">2016-17</a></li>
+        <a href="#" class="menu__link">2015-16</a></li>
+        <a href="#" class="menu__link">more</a></li>
+        </ul>
+    </nav>
+    <div class="leagues">
+        <ul>
+            <li>
+                <a href="<?php echo $_SESSION['rootPath']; ?>assets/script/league_info1.php"
+                   class="league_list">Albany Leagues</a></li>
+            <li><a href="#" class="league_list">Buffalo Leagues</a></li>
+            <li><a href="#" class="league_list">Rochester Leagues</a></li>
+            <li><a href="#" class="league_list">Syracuse Leagues</a></li>
+        </ul>
+    </div>
     <div id="grid-container-content">
         <div id="header">
             <h1>Albany Area-League 1</h1>
@@ -187,10 +206,5 @@ $_SESSION['rootPath'] = '../../';
         </div>
     </div>
 </div>
-
-<?php
-include($_SESSION['rootPath'] . "assets/inc/footer.php");
-?>
-
 </body>
 </html>
