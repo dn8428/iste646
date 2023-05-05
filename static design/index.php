@@ -13,16 +13,9 @@ $_SESSION['rootPath'] = "./";
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- <link rel="stylesheet" type="text/css" href="./assets/css/mastermind-main-style.css"/>
-    <link rel="stylesheet" type="text/css" href="./assets/css/mastermind-main-page.css"/>
-    <link rel="stylesheet" type="text/css" href="./assets/css/mastermind-navbar.css"/>
-    <link rel="stylesheet" type="text/css" href="./assets/css/mastermind-footer.css"/>
-    <link rel="stylesheet" type="text/css" href="./assets/css/mastermind-scorebar.css"/> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <link rel="stylesheet" type="text/css" href="<?php echo $_SESSION['rootPath']?>assets/css/style.css">
-
-
+    <link rel="stylesheet" type="text/css" href="<?php echo $_SESSION['rootPath'] ?>assets/css/style.css">
+    <script src="<?php echo $_SESSION['rootPath']; ?>assets/js/main.js"></script>
 
     <title>MasterMinds</title>
 </head>
@@ -111,6 +104,7 @@ $_SESSION['rootPath'] = "./";
 
 
                 </div>
+
             </div>
         </div>
     </div>
@@ -229,31 +223,21 @@ $_SESSION['rootPath'] = "./";
                             <h3>Deadlines</h3>
                         </div>
                         <div class="text">
-                            <div class="text">
-                                <div class="deadline-item">
-                                    <h4>Albany:</h4>
-                                    <p>Friday, September 23, 2022</p>
-                                </div>
-                                <div class="deadline-item">
-                                    <h4>Binghamton:</h4>
-                                    <p>Friday, November 4, 2022</p>
-                                </div>
-                                <div class="deadline-item">
-                                    <h4>Buffalo:</h4>
-                                    <p>Friday, September 23, 2022</p>
-                                </div>
-                                <div class="deadline-item">
-                                    <h4>Rochester:</h4>
-                                    <p>Friday, September 23, 2022</p>
-                                </div>
-                                <div class="deadline-item">
-                                    <h4>Syracuse:</h4>
-                                    <p>Friday, October 7, 2022</p>
-                                </div>
-                                <div class="deadline-item">
-                                    <h4>Plattsburgh:</h4>
-                                    <p>Thursday, November 10, 2022</p>
-                                </div>
+                            <div class="deadline-item">
+                                <h4>Albany:</h4>
+                                <p>Friday, September 23, 2022</p>
+                            </div>
+                            <div class="deadline-item">
+                                <h4>Binghamton:</h4>
+                                <p>Friday, November 4, 2022</p>
+                            </div>
+                            <div class="deadline-item">
+                                <h4>Buffalo:</h4>
+                                <p>Friday, September 23, 2022</p>
+                            </div>
+                            <div class="deadline-item">
+                                <h4>Rochester:</h4>
+                                <p>Friday, September 23, 2022</p>
                             </div>
                             <div class="deadline-item">
                                 <h4>Syracuse:</h4>
@@ -355,32 +339,16 @@ $_SESSION['rootPath'] = "./";
                 </div>
             </div>
 
+
             <div class="resource-container-2"></div>
 
         </div>
+
     </div>
-    
-    <footer class="footer">
-        <div class="footer-container">
-            <div class=nav-container>
-                <a href="#" target="_blank">Home</a>
-                <a href="#" target="_blank">Program</a>
-                <a href="#" target="_blank">General</a>
-                <a href="#" target="_blank">League</a>
-                <a href="#" target="_blank">Teams</a>
-                <a href="#" target="_blank">Contact</a>
-                <a href="#" target="_blank">related links</a>
-                <a href="#" target="_blank">store</a>
-            </div>
-            <div class="social-icons-container">
-                <a href="#" class="fa fa-facebook"></a>
-                <a href="#" class="fa fa-twitter"></a>
-                <a href="#" class="fa fa-google"></a>
-                <a href="#" class="fa fa-youtube"></a>
-                <a href="#" class="fa fa-instagram"></a>
-            </div>
-        </div>
-    </footer>
+
+    <?php
+    include($_SESSION['rootPath'] . "assets/inc/footer.php");
+    ?>
 
 </div>
 
