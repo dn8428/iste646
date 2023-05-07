@@ -13,7 +13,7 @@
                 </li>
                 <li class="dropdown">
                     <div class="dropWrap">
-                        <a href="<?php echo $_SESSION['rootPath'] ?>">General Info</a>
+                        <a href="<?php echo $_SESSION['rootPath'] ?>">Program Info</a>
                         <ul>
                             <li><a class="dropItem" href="<?php echo $_SESSION['rootPath'] ?>">All-stars</a></li>
                             <li><a class="dropItem" href="<?php echo $_SESSION['rootPath'] ?>">Events</a></li>
@@ -22,11 +22,11 @@
                     </div>
                 </li>
                 <li>
-                    <a href="<?php echo $_SESSION['rootPath'] ?>assets/pages/general-info/index.php">Program Info</a>
+                    <a href="<?php echo $_SESSION['rootPath'] ?>assets/pages/general-info/index.php">General Info</a>
                 </li>
                 <li class="dropdown">
                     <div class="dropWrap">
-                        <a href="<?php echo $_SESSION['rootPath'] ?>">Leagues Info</a>
+                        <a href="<?php echo $_SESSION['rootPath'] ?>assets/script/league_info.php">Leagues Info</a>
                     </div>
                 </li>
                 <li>
@@ -50,16 +50,16 @@
                     </li>
                     <li class="dropdown">
                         <div class="dropWrap">
-                            <a href="<?php echo $_SESSION['rootPath'] ?>">General Info</a>
+                            <a href="<?php echo $_SESSION['rootPath'] ?>">Program Info</a>
                         </div>
                     </li>
                     <li>
-                        <a href="<?php echo $_SESSION['rootPath'] ?>assets/pages/general-info/index.php">Program
+                        <a href="<?php echo $_SESSION['rootPath'] ?>assets/pages/general-info/index.php">General
                             Info</a>
                     </li>
                     <li class="dropdown">
                         <div class="dropWrap">
-                            <a href="<?php echo $_SESSION['rootPath'] ?>">Leagues Info</a>
+                            <a href="<?php echo $_SESSION['rootPath'] ?>assets/script/league_info.php">Leagues Info</a>
                         </div>
                     </li>
                     <li>
