@@ -12,14 +12,19 @@
 # This function is in functions.php 
 $innov_settings = Innovation_Settings();
 
+session_name("iste646_group");
+session_start();
+
+$_SESSION['rootPath'] = "./";
+
 # Include the header template
 include('header.inc.php'); 
 ?>
 	
 	<div class="wrapper clearfix">
 		<!-- page content -->
-		<article>
-			<section>
+		<article class="body-main-container">
+			<section id="main-container">
 				
 				<!-- title and content -->
 				<h1><?php get_page_title(); ?></h1>

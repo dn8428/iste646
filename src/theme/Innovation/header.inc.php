@@ -43,14 +43,17 @@
 			<div class="wrapper">
 				
 				<!-- logo/sitename -->
-				<a href="<?php get_site_url(); ?>" id="logo" ><?php get_site_name(); ?></a>
-				
+				<div class="logo_container">
+					<a href="<?php echo $_SESSION['rootPath']?>"><img src="<?php get_theme_url(); ?>/images/mastermind_logo_3.png" alt="logo"></a>
+				</div>
 				<!-- main navigation -->
-				<nav id="main-nav">
-					<ul>
-						<?php get_navigation(get_page_slug(FALSE)); ?>
-					</ul>
-				</nav>
+				<div id="main-nav">
+					<nav id="navbar">
+						<ul>
+							<?php get_navigation(get_page_slug(FALSE)); ?>
+						</ul>
+					</nav>
+				</div>
 			</div>
 		</div>
 		
