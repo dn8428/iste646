@@ -230,7 +230,7 @@ function edit_league_show() {
          
       </div>
       
-      <?php if($url != '') { ?>
+      <!-- <?php if($url != '') { ?>
          <p class="backuplink" ><?php 
             if (isset($pubDate)) { 
                echo sprintf(i18n_r('LAST_SAVED'), '<em>'.$author.'</em>').' '. lngDate($pubDate).'&nbsp;&nbsp; ';
@@ -239,7 +239,7 @@ function edit_league_show() {
                echo '&bull;&nbsp;&nbsp; <a href="backup-edit.php?p=view&amp;id='.$url.'" target="_blank" >'.i18n_r('BACKUP_AVAILABLE').'</a>';
             } 
          ?></p>
-      <?php } ?>
+      <?php } ?> -->
       
    </form>
    <script type="text/javascript" src="template/js/ckeditor/ckeditor.js<?php echo getDef("GSCKETSTAMP",true) ? "?t=".getDef("GSCKETSTAMP") : ""; ?>"></script>
