@@ -1,5 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<channel><item><title><![CDATA[seniors2019]]></title><slug>seniors2019</slug><value><![CDATA[&lt;?php
+<channel><item><title><![CDATA[display_league]]></title><slug>display_league</slug><value><![CDATA[&lt;?php
+if(!empty($_GET[&#039;year&#039;]) &amp;&amp;
+   !empty($_GET[&#039;level&#039;]) &amp;&amp;
+   !empty($_GET[&#039;region&#039;]) &amp;&amp;
+   !empty($_GET[&#039;regionID&#039;]))
+{
+  $year = filter_var($_GET[&#039;year&#039;], FILTER_SANITIZE_NUMBER_INT);
+  $level = filter_var($_GET[&#039;level&#039;], FILTER_SANITIZE_STRING);
+  $region = filter_var($_GET[&#039;region&#039;], FILTER_SANITIZE_STRING);
+  $regionID = filter_var($_GET[&#039;regionID&#039;], FILTER_SANITIZE_NUMBER_INT);
+?&gt;
+&lt;a href=&quot;index.php?id=showleague&quot;&gt; Back &lt;/a&gt;
+&lt;br&gt;
+&lt;?php
+$file = GSDATAOTHERPATH . &quot;edit_league/&quot; .  $year . &quot;/&quot; . $level . &quot;/&quot; . $region . &quot;_&quot; . $regionID . &quot;.xml&quot;;
+$xml = getXML($file);
+echo htmlspecialchars_decode($xml-&gt;content);
+}
+else {
+$data_folder = GSDATAOTHERPATH . &quot;edit_league/&quot;;
+$files = scandir($data_folder, SCANDIR_SORT_DESCENDING);
+$years= array_diff($files, array(&#039;.&#039;,&#039;..&#039;));
+if(empty($years))
+{
+echo &quot;No Leagues exist...&quot;;
+echo &quot;Contact Administrator&quot;;
+die();
+}
+?&gt;
+
+&lt;table&gt;
+&lt;tr&gt;
+&lt;th&gt; Year &lt;/th&gt;
+&lt;th&gt; Region &lt;/th&gt;
+&lt;th&gt; Level &lt;/th&gt;
+&lt;/tr&gt;
+&lt;?php
+foreach ($years as $year) {
+$year_folder = $data_folder . $year . &quot;/&quot;;
+$files = scandir($year_folder , SCANDIR_SORT_DESCENDING);
+$levels = array_diff($files, array(&#039;.&#039;,&#039;..&#039;));
+foreach ($levels as $level) {
+
+$level_folder = $year_folder . $level;
+$files = scandir($level_folder);
+$leagues = array_diff($files, array(&#039;.&#039;,&#039;..&#039;));
+foreach($leagues as $raw_league) {
+$league_info = substr($raw_league, 0, -4);
+$league = explode(&quot;_&quot;,$league_info);
+$link = &quot;index.php?id=showleague&amp;year=&quot; . $year . &quot;&amp;level=&quot; . $level . &quot;&amp;region=&quot; . $league[0] . &quot;&amp;regionID=&quot; . $league[1];
+?&gt;
+&lt;tr&gt;
+&lt;td&gt;
+&lt;?php echo $year ?&gt;
+&lt;/td&gt;
+&lt;td&gt;
+&lt;a href=&lt;?echo $link?&gt;/&gt;
+  &lt;?php echo $league[0]. &quot; &quot; . $league[1] ?&gt;
+&lt;/a&gt;
+&lt;/td&gt;
+&lt;td&gt;
+&lt;?php 
+switch ($level) {
+  case &quot;JV&quot;:
+    echo &quot;Junior Varsity&quot;;
+    break;
+  case &quot;V&quot;:
+    echo &quot;Varsity&quot;;
+    break;
+  default:
+    echo &quot;Unknown&quot;;
+    break;
+}
+?&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;?
+} # leagues
+} # levels
+} # years
+?&gt;
+&lt;/table&gt;
+&lt;?php
+} # non-specific 
+?&gt;]]></value></item><item><title><![CDATA[seniors2019]]></title><slug>seniors2019</slug><value><![CDATA[&lt;?php
 echo &quot;&lt;table&gt;\\n\\n&quot;;
 $f = fopen(&quot;data/uploads/collegechoices/seniors2019.csv&quot;, &quot;r&quot;);
 while (($line = fgetcsv($f)) !== false) {
@@ -38,7 +122,7 @@ echo &quot;\\n&lt;/table&gt;&quot;;
 ?&gt;]]></value></item><item><title><![CDATA[seniors2022]]></title><slug>seniors2022</slug><value><![CDATA[&lt;?php
 echo &quot;&lt;table&gt;\\n\\n&quot;;
 $h = fopen(&quot;data/uploads/collegechoices/seniors2022.csv&quot;, &quot;r&quot;);
-while (($line = fgetcsv($f)) !== false) {
+while (($line = fgetcsv($h)) !== false) {
 echo &quot;&lt;tr&gt;&quot;;
 foreach ($line as $cell) {
 echo &quot;&lt;td&gt;&quot; . htmlspecialchars($cell) . &quot;&lt;/td&gt;&quot;;

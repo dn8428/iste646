@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<item><pubDate>Mon, 27 Mar 2023 00:16:19 +0000</pubDate><title><![CDATA[Events]]></title><url><![CDATA[events]]></url><meta><![CDATA[]]></meta><metad><![CDATA[]]></metad><menu><![CDATA[Events]]></menu><menuOrder><![CDATA[0]]></menuOrder><menuStatus><![CDATA[]]></menuStatus><template><![CDATA[template.php]]></template><parent><![CDATA[program-information]]></parent><content><![CDATA[&lt;p&gt;Events&lt;/p&gt;
+<item><pubDate>Sun, 09 Apr 2023 13:23:00 +0000</pubDate><title><![CDATA[Events]]></title><url><![CDATA[events]]></url><meta><![CDATA[]]></meta><metad><![CDATA[]]></metad><template><![CDATA[template.php]]></template><content><![CDATA[&lt;p&gt;Events&lt;/p&gt;
 
 &lt;ul&gt;
 	&lt;li&gt;&lt;a href=&quot;/index.php?id=results&quot;&gt;Results&lt;/a&gt;&lt;/li&gt;
 	&lt;li&gt;&lt;a href=&quot;/index.php?id=championships&quot;&gt;Championships&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-]]></content><private><![CDATA[]]></private><author><![CDATA[nymm]]></author></item>
+]]></content><author><![CDATA[nymm]]></author><parent><![CDATA[program-information]]></parent><menuOrder><![CDATA[2]]></menuOrder><menu><![CDATA[]]></menu><menuStatus><![CDATA[]]></menuStatus><private><![CDATA[]]></private></item>
