@@ -59,7 +59,7 @@ function create_league_file($year, $level, $region, $id)
    // Set up the folder name and its permissions
    // Note the constant GSDATAOTHERPATH, which points to /path/to/getsimple/data/other/
    $folder        = GSDATAOTHERPATH . '/' . $thisfile . '/' . $year . '/' . $level . '/';
-   $filename      = $folder . $region . $id . ".xml";
+   $filename      = $folder . $region . "_" . $id . ".xml";
    $file_exists = file_exists($filename);
 
    $title = $region . " " . $id;
@@ -154,7 +154,7 @@ function edit_league_show() {
                <option value="JV">Junior Varsity</option>
             </select>
          </div>
-         <input type="submit" name="submit" value="Edit">
+         <input type="submit" name="submit" value="View">
       </form>
       <hr>
    <?php
@@ -173,13 +173,13 @@ function edit_league_show() {
       {
          $thisfile=basename(__FILE__, ".php");
          $folder        = GSDATAOTHERPATH . $thisfile . '/' . $year . '/' . $level . '/';
-         $filename      = $folder . $region . $regionalId . ".xml";
-         $xml = getXML($folder . $filename);
+         $filename      = $folder . $region . "_" . $regionalId . ".xml";
+         $xml = getXML($filename);
          
          $content = stripslashes($xml->content);
-         
          if(!empty($_POST['post-content']))
          {	
+            // $post_content = ($_POST['post-content']);   
             $post_content = safe_slash_html($_POST['post-content']);   
             $content = $post_content;
 
