@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<channel><item><title><![CDATA[display_league]]></title><slug>display_league</slug><value><![CDATA[&lt;?php
+<channel><item><title><![CDATA[collegechoices]]></title><slug>collegechoices</slug><value><![CDATA[&lt;?php global $args;
+$path = &quot;data/uploads/collegechoices/&quot; . $args[0];
+echo &quot;&lt;table&gt;\\n\\n&quot;;
+$f = fopen($path, &quot;r&quot;);
+while (($line = fgetcsv($f)) !== false) {
+echo &quot;&lt;tr&gt;&quot;;
+foreach ($line as $cell) {
+echo &quot;&lt;td&gt;&quot; . htmlspecialchars($cell) . &quot;&lt;/td&gt;&quot;;
+}
+echo &quot;&lt;/tr&gt;\\n&quot;;
+}
+fclose($f);
+echo &quot;\\n&lt;/table&gt;&quot;;
+?&gt;]]></value></item><item><title><![CDATA[display_league]]></title><slug>display_league</slug><value><![CDATA[&lt;?php
 if(!empty($_GET[&#039;year&#039;]) &amp;&amp;
    !empty($_GET[&#039;level&#039;]) &amp;&amp;
    !empty($_GET[&#039;region&#039;]) &amp;&amp;
@@ -10,7 +23,7 @@ if(!empty($_GET[&#039;year&#039;]) &amp;&amp;
   $region = filter_var($_GET[&#039;region&#039;], FILTER_SANITIZE_STRING);
   $regionID = filter_var($_GET[&#039;regionID&#039;], FILTER_SANITIZE_NUMBER_INT);
 ?&gt;
-&lt;a href=&quot;index.php?id=showleague&quot;&gt; Back &lt;/a&gt;
+&lt;a href=&quot;index.php?id=league-info&quot;&gt; Back &lt;/a&gt;
 &lt;br&gt;
 &lt;?php
 $file = GSDATAOTHERPATH . &quot;edit_league/&quot; .  $year . &quot;/&quot; . $level . &quot;/&quot; . $region . &quot;_&quot; . $regionID . &quot;.xml&quot;;
@@ -48,7 +61,7 @@ $leagues = array_diff($files, array(&#039;.&#039;,&#039;..&#039;));
 foreach($leagues as $raw_league) {
 $league_info = substr($raw_league, 0, -4);
 $league = explode(&quot;_&quot;,$league_info);
-$link = &quot;index.php?id=showleague&amp;year=&quot; . $year . &quot;&amp;level=&quot; . $level . &quot;&amp;region=&quot; . $league[0] . &quot;&amp;regionID=&quot; . $league[1];
+$link = &quot;index.php?id=league-info&amp;year=&quot; . $year . &quot;&amp;level=&quot; . $level . &quot;&amp;region=&quot; . $league[0] . &quot;&amp;regionID=&quot; . $league[1];
 ?&gt;
 &lt;tr&gt;
 &lt;td&gt;
