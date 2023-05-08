@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<channel><item><title><![CDATA[seniors2019]]></title><slug>seniors2019</slug><value><![CDATA[&lt;?php
+<channel><item><title><![CDATA[collegechoices]]></title><slug>collegechoices</slug><value><![CDATA[&lt;?php global $args;
+$path = &quot;data/uploads/collegechoices/&quot; . $args[0];
+
+echo &quot;&lt;table&gt;\\n\\n&quot;;
+$f = fopen($path, &quot;r&quot;);
+while (($line = fgetcsv($f)) !== false) {
+echo &quot;&lt;tr&gt;&quot;;
+foreach ($line as $cell) {
+echo &quot;&lt;td&gt;&quot; . htmlspecialchars($cell) . &quot;&lt;/td&gt;&quot;;
+}
+echo &quot;&lt;/tr&gt;\\n&quot;;
+}
+fclose($f);
+echo &quot;\\n&lt;/table&gt;&quot;;
+?&gt;]]></value></item><item><title><![CDATA[seniors2019]]></title><slug>seniors2019</slug><value><![CDATA[&lt;?php
 echo &quot;&lt;table&gt;\\n\\n&quot;;
 $f = fopen(&quot;data/uploads/collegechoices/seniors2019.csv&quot;, &quot;r&quot;);
 while (($line = fgetcsv($f)) !== false) {
@@ -38,7 +52,7 @@ echo &quot;\\n&lt;/table&gt;&quot;;
 ?&gt;]]></value></item><item><title><![CDATA[seniors2022]]></title><slug>seniors2022</slug><value><![CDATA[&lt;?php
 echo &quot;&lt;table&gt;\\n\\n&quot;;
 $h = fopen(&quot;data/uploads/collegechoices/seniors2022.csv&quot;, &quot;r&quot;);
-while (($line = fgetcsv($f)) !== false) {
+while (($line = fgetcsv($h)) !== false) {
 echo &quot;&lt;tr&gt;&quot;;
 foreach ($line as $cell) {
 echo &quot;&lt;td&gt;&quot; . htmlspecialchars($cell) . &quot;&lt;/td&gt;&quot;;

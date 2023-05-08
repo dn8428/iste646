@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<channel><item><title><![CDATA[seniors2019]]></title><slug>seniors2019</slug><value><![CDATA[&lt;?php
+<channel><item><title><![CDATA[collegechoices]]></title><slug>collegechoices</slug><value><![CDATA[&lt;?php global $args;
+$path = &quot;data/uploads/collegechoices/&quot; . $args[0];
+
 echo &quot;&lt;table&gt;\\n\\n&quot;;
-$f = fopen(&quot;data/uploads/collegechoices/seniors2019.csv&quot;, &quot;r&quot;);
+$f = fopen($path, &quot;r&quot;);
 while (($line = fgetcsv($f)) !== false) {
 echo &quot;&lt;tr&gt;&quot;;
 foreach ($line as $cell) {
@@ -10,42 +12,6 @@ echo &quot;&lt;td&gt;&quot; . htmlspecialchars($cell) . &quot;&lt;/td&gt;&quot;;
 echo &quot;&lt;/tr&gt;\\n&quot;;
 }
 fclose($f);
-echo &quot;\\n&lt;/table&gt;&quot;;
-?&gt;]]></value></item><item><title><![CDATA[seniors2020]]></title><slug>seniors2020</slug><value><![CDATA[&lt;?php
-echo &quot;&lt;table&gt;\\n\\n&quot;;
-$f = fopen(&quot;data/uploads/collegechoices/seniors2020.csv&quot;, &quot;r&quot;);
-while (($line = fgetcsv($f)) !== false) {
-echo &quot;&lt;tr&gt;&quot;;
-foreach ($line as $cell) {
-echo &quot;&lt;td&gt;&quot; . htmlspecialchars($cell) . &quot;&lt;/td&gt;&quot;;
-}
-echo &quot;&lt;/tr&gt;\\n&quot;;
-}
-fclose($f);
-echo &quot;\\n&lt;/table&gt;&quot;;
-?&gt;]]></value></item><item><title><![CDATA[seniors2021]]></title><slug>seniors2021</slug><value><![CDATA[&lt;?php
-echo &quot;&lt;table&gt;\\n\\n&quot;;
-$g = fopen(&quot;data/uploads/collegechoices/seniors2021.csv&quot;, &quot;r&quot;);
-while (($line = fgetcsv($g)) !== false) {
-echo &quot;&lt;tr&gt;&quot;;
-foreach ($line as $cell) {
-echo &quot;&lt;td&gt;&quot; . htmlspecialchars($cell) . &quot;&lt;/td&gt;&quot;;
-}
-echo &quot;&lt;/tr&gt;\\n&quot;;
-}
-fclose($g);
-echo &quot;\\n&lt;/table&gt;&quot;;
-?&gt;]]></value></item><item><title><![CDATA[seniors2022]]></title><slug>seniors2022</slug><value><![CDATA[&lt;?php
-echo &quot;&lt;table&gt;\\n\\n&quot;;
-$h = fopen(&quot;data/uploads/collegechoices/seniors2022.csv&quot;, &quot;r&quot;);
-while (($line = fgetcsv($h)) !== false) {
-echo &quot;&lt;tr&gt;&quot;;
-foreach ($line as $cell) {
-echo &quot;&lt;td&gt;&quot; . htmlspecialchars($cell) . &quot;&lt;/td&gt;&quot;;
-}
-echo &quot;&lt;/tr&gt;\\n&quot;;
-}
-fclose($h);
 echo &quot;\\n&lt;/table&gt;&quot;;
 ?&gt;]]></value></item><item><title><![CDATA[Sidebar]]></title><slug>sidebar</slug><value><![CDATA[&lt;h2&gt;GetSimple Features&lt;/h2&gt;
 &lt;ul&gt; 
